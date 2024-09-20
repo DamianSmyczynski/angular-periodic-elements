@@ -1,0 +1,56 @@
+<h4 mat-dialog-title class="dialog-title">Edit Element</h4>
+
+<div mat-dialog-content class="dialog-content">
+  <mat-form-field appearance="outline" class="form-field">
+    <mat-label>Name</mat-label>
+    <input
+      matInput
+      [(ngModel)]="data.name"
+      placeholder="Name"
+      required
+      #name="ngModel"
+      [class.invalid]="name.invalid && name.touched"
+    />
+    <mat-error *ngIf="name.invalid && name.touched">
+      Name is required.
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="form-field">
+    <mat-label>Weight</mat-label>
+    <input
+      matInput
+      type="number"
+      [(ngModel)]="data.weight"
+      placeholder="Weight"
+      min="0"
+      required
+      #weight="ngModel"
+      [class.invalid]="weight.invalid && weight.touched"
+    />
+    <mat-error *ngIf="weight.invalid && weight.touched">
+      Weight is required.
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="form-field">
+    <mat-label>Symbol</mat-label>
+    <input
+      matInput
+      [(ngModel)]="data.symbol"
+      placeholder="Symbol"
+      maxlength="3"
+      required
+      #symbol="ngModel"
+      [class.invalid]="symbol.invalid && symbol.touched"
+    />
+    <mat-error *ngIf="symbol.invalid && symbol.touched">
+      Symbol is required.
+    </mat-error>
+  </mat-form-field>
+</div>
+
+<div mat-dialog-actions class="dialog-actions">
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button (click)="onSave()">Save</button>
+</div>

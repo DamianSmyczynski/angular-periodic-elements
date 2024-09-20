@@ -1,0 +1,28 @@
+.dialog-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-field {
+    width: 100%;
+}
+
+.dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    padding: 16px;
+    gap: 8px;
+}
+
+button {
+    min-width: 80px;
+}
+
+.dialog-title {
+    text-align: center;
+    margin-top: 12px;
+}
